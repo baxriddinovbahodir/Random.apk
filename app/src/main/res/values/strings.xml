@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Random Uz</string>
+    <string name="Activity">from</string>
+    <string name="Activity_main_from">from</string>
+    <string name="Activity_main_to">to</string>
+    <string name="Activity_main_generate">Generate</string>
+</resources>

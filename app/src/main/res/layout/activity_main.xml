@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+       android:id="@+id/fromLayout"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:inputType="number"
+       android:hint="@string/Activity_main_from"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toStartOf="@id/toLayout"
+       android:layout_marginStart="16dp"
+       android:layout_marginEnd="8dp"
+       android:layout_margin="16dp"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/from"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/toLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/fromLayout"
+        app:layout_constraintStart_toEndOf="@id/fromLayout"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/Activity_main_to"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/to"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/card"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintWidth_percent="0.5"
+    app:layout_constraintDimensionRatio="1:1"
+    app:cardCornerRadius="8dp"
+    app:cardBackgroundColor="@color/teal_200"
+    app:layout_constraintTop_toBottomOf="@id/generate"
+    app:layout_constraintBottom_toBottomOf="@id/fromLayout"
+    app:layout_constraintVertical_chainStyle="packed">
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="/?"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="48sp" />
+
+</androidx.cardview.widget.CardView>
+
+
+
+    <Button
+        android:id="@+id/generate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Activity_main_generate"
+        app:layout_constraintTop_toBottomOf="@id/card"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="48dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
